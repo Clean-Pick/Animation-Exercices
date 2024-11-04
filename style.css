@@ -1,0 +1,34 @@
+body {
+    background-color: black;
+}
+
+.drill {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 100px;
+}
+
+.hello {
+    border: 3px solid white;
+    background-color: inherit;
+
+    color: white;
+
+    height: 50%;
+    width: 10em;
+
+
+    transition: background-color .5s,
+        color .5s,
+        transform .5s;
+}
+
+.hello:hover {
+    background-color: white;
+    color: black;
+
+    transform: scale(1.5) translate(150px);
+}

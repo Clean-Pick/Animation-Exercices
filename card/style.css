@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+
+
+
+    justify-content: center;
+    align-items: center;
+
+    height: 50vh;
+}
+
+.card {
+    grid-column-start: 5;
+    grid-column-end: 9;
+
+    grid-row: 1;
+
+    display: flex;
+    flex-wrap: wrap;
+
+
+    position: relative;
+
+    max-width: 100%;
+    max-height: 50vh;
+
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.25);
+
+    transition: box-shadow .5s;
+}
+
+.img {
+    max-height: 100%;
+
+    overflow: hidden;
+}
+
+.img img {
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    transition: transform .5s, opacity .5s;
+
+    background-color: white;
+}
+
+
+
+.date {
+    position: absolute;
+
+    right: 1em;
+    top: 1em;
+
+    height: 3.5em;
+    width: 3.5em;
+
+    color: white;
+    background-color: rgb(231, 76, 60);
+    border-radius: 50%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.date p {
+   position: relative;
+
+    top: -0.5em;
+
+    line-height: 1em;
+
+    text-align: center;
+}
+
+.descContainer {
+    position: absolute;
+    z-index: 100;
+
+    bottom: 0;
+
+    height: 33%;
+    width: 100%;
+
+    background-color: white;
+
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr 80% 1fr;
+
+    transition: height .5s;
+}
+
+.type {
+    position: absolute;
+
+    top: -2em;
+
+
+    color: white;
+    background-color: rgb(231, 76, 60);
+
+    text-transform: uppercase;
+
+    padding: 0.5em;
+}
+
+.title {
+    grid-row: 1;
+    grid-column: 2;
+
+    text-transform: uppercase;
+
+    position: relative;
+    top: 10px;
+}
+
+.subtitle {
+        grid-row: 2;
+    grid-column: 2;
+
+    position: relative;
+
+    color: rgb(231, 76, 60);
+
+    transition: transform .5s;
+
+    margin-bottom: -10px;
+}
+
+.desc {
+    opacity: 0;
+
+    position: relative;
+    bottom: 0;
+
+    grid-row: 3;
+    grid-column: 2;
+
+    animation: fadeIn .5s linear;
+    transition: transform .5s, opacity .5s;
+
+}
+
+.telemetry {
+    grid-row: 4;
+    grid-column: 2;
+
+    position: absolute;
+    bottom: 10px;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 60%;
+
+    text-align: left;
+}
+
+.ago, .nbrComments {
+    margin-left: -25px;
+}
+
+.card:hover {
+        box-shadow: 0 0 18px 1px rgba(0,0,0,0.25);
+
+
+    .descContainer {
+        height: 60%;
+    }
+    .subtitle {
+        transform: translateY(-40%);
+    }
+    .desc {
+        display: block;
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+    img {
+        transform: scale(1.2);
+        overflow: hidden;
+        opacity: 0.5;
+    }
+
+}
